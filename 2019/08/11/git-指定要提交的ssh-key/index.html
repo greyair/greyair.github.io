@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="git,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件： 123-i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is ~/.ssh/identity for protocol version 1, a">
+<meta name="description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件：  -i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is~/.ssh/identity for protocol version 1, and">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 指定要提交的ssh key">
 <meta property="og:url" content="http://blog.plist.xyz/2019/08/11/git-指定要提交的ssh-key/index.html">
 <meta property="og:site_name" content="灰空气的小站">
-<meta property="og:description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件： 123-i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is ~/.ssh/identity for protocol version 1, a">
+<meta property="og:description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件：  -i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is~/.ssh/identity for protocol version 1, and">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-11T06:35:12.480Z">
+<meta property="og:updated_time" content="2019-08-11T17:26:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 指定要提交的ssh key">
-<meta name="twitter:description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件： 123-i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is ~/.ssh/identity for protocol version 1, a">
+<meta name="twitter:description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件：  -i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is~/.ssh/identity for protocol version 1, and">
 
 
 
@@ -99,7 +100,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -160,7 +161,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">仅仅活着就已经耗尽所有力气</p>
       
   </div>
 
@@ -229,16 +230,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
-            
-            公益404
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -277,7 +268,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="greyair">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -307,10 +298,44 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-11T17:26:00+00:00">
+                2019-08-11
+              </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,64 +364,63 @@
       
 
       
-        <h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>ssh具有-i选项，用于告知在验证时使用哪个私钥文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-i identity_file</span><br><span class="line">Selects a file from <span class="built_in">which</span> the identity (private key) <span class="keyword">for</span> RSA or DSA authentication is <span class="built_in">read</span>.  The default is </span><br><span class="line">~/.ssh/identity <span class="keyword">for</span> protocol version 1, and ~/.ssh/id_rsa and ~/.ssh/id_dsa <span class="keyword">for</span> protocol version 2.  Identity files may also be specified on a per-host basis <span class="keyword">in</span> the configuration file.  It is possible to have multiple -i options (and multiple identities specified <span class="keyword">in</span> configuration files).</span><br></pre></td></tr></table></figure>
-
+        <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>ssh具有-i选项，用于告知在验证时使用哪个私钥文件：</p>
+<blockquote>
+<p>-i identity_file<br>Selects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is<br>~/.ssh/identity for protocol version 1, and ~/.ssh/id_rsa and ~/.ssh/id_dsa for protocol version 2.  Identity files may also be specified on a per-host basis in the configuration file.  It is possible to have multiple -i options (and multiple identities specified in configuration files).</p>
+</blockquote>
 <p>有没有类似的方法告诉git哪个私钥文件在~/.ssh目录中有多个私钥的系统上使用？</p>
-<h5 id="最佳解决方案"><a href="#最佳解决方案" class="headerlink" title="最佳解决方案"></a>最佳解决方案</h5><p>在~/.ssh/config中，添加：</p>
+<a id="more"></a>
+<h4 id="最佳解决方案"><a href="#最佳解决方案" class="headerlink" title="最佳解决方案"></a>最佳解决方案</h4><p>在~/.ssh/config中，添加：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa_github</span><br><span class="line">	User git</span><br></pre></td></tr></table></figure>
 
 <p>现在你可以做git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/repo.git。</p>
 <p>注意：验证IdentityFile的权限是否为400.SSH将以不清楚的方式拒绝太可读的SSH密钥。它只会看起来像一个凭证拒绝。在这种情况下，解决方案是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 400 ~/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
 
-<h5 id="次佳解决方案"><a href="#次佳解决方案" class="headerlink" title="次佳解决方案"></a>次佳解决方案</h5><ul>
-<li><h6 id="环境变量GIT-SSH-COMMAND："><a href="#环境变量GIT-SSH-COMMAND：" class="headerlink" title="环境变量GIT_SSH_COMMAND："></a>环境变量GIT_SSH_COMMAND：</h6>从Git版本2.3.0可以使用环境变量GIT_SSH_COMMAND，如下所示：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_SSH_COMMAND=<span class="string">"ssh -i ~/.ssh/id_rsa_example"</span> git <span class="built_in">clone</span> example</span><br></pre></td></tr></table></figure>
+<h4 id="次佳解决方案"><a href="#次佳解决方案" class="headerlink" title="次佳解决方案"></a>次佳解决方案</h4><ul>
+<li><h5 id="环境变量GIT-SSH-COMMAND："><a href="#环境变量GIT-SSH-COMMAND：" class="headerlink" title="环境变量GIT_SSH_COMMAND："></a>环境变量GIT_SSH_COMMAND：</h5><p>  从Git版本2.3.0可以使用环境变量GIT_SSH_COMMAND，如下所示：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_SSH_COMMAND=<span class="string">"ssh -i ~/.ssh/id_rsa_example"</span> git <span class="built_in">clone</span> example</span><br></pre></td></tr></table></figure>
+
+<p>  请注意，-i有时可以被您的配置文件覆盖，在这种情况下，您应该给SSH一个空配置文件，如下所示：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_SSH_COMMAND=<span class="string">"ssh -i ~/.ssh/id_rsa_example -F /dev/null"</span> git <span class="built_in">clone</span> example</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="配置core-sshCommand："><a href="#配置core-sshCommand：" class="headerlink" title="配置core.sshCommand："></a>配置core.sshCommand：</h5><p>  从Git版本2.10.0，您可以配置每个repo或全局，所以您不必再设置环境变量！</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config core.sshCommand <span class="string">"ssh -i ~/.ssh/id_rsa_example -F /dev/null"</span></span><br><span class="line">git pull</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<p>请注意，-i有时可以被您的配置文件覆盖，在这种情况下，您应该给SSH一个空配置文件，如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_SSH_COMMAND=<span class="string">"ssh -i ~/.ssh/id_rsa_example -F /dev/null"</span> git <span class="built_in">clone</span> example</span><br></pre></td></tr></table></figure>
-
+<h4 id="第三种方案"><a href="#第三种方案" class="headerlink" title="第三种方案"></a>第三种方案</h4><p>没有直接的方法告诉git哪个私钥要使用，因为它依赖于ssh进行存储库认证。但是，仍有几种方法可以实现您的目标：</p>
 <ul>
-<li><h6 id="配置core-sshCommand："><a href="#配置core-sshCommand：" class="headerlink" title="配置core.sshCommand："></a>配置core.sshCommand：</h6>从Git版本2.10.0，您可以配置每个repo或全局，所以您不必再设置环境变量！<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config core.sshCommand <span class="string">"ssh -i ~/.ssh/id_rsa_example -F /dev/null"</span></span><br><span class="line">git pull</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<li><h5 id="选项1：ssh-agent"><a href="#选项1：ssh-agent" class="headerlink" title="选项1：ssh-agent"></a>选项1：ssh-agent</h5><p>  您可以使用ssh-agent临时授权您的私钥。<br>  例如：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-agent sh -c <span class="string">'ssh-add ~/.ssh/id_rsa; git fetch user@host'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="选项2：GIT-SSH-COMMAND"><a href="#选项2：GIT-SSH-COMMAND" class="headerlink" title="选项2：GIT_SSH_COMMAND"></a>选项2：GIT_SSH_COMMAND</h5><p>  使用GIT_SSH_COMMAND环境变量(Git 2.3.0+)传递ssh参数。<br>  例如：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ GIT_SSH_COMMAND=<span class="string">'ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'</span> git <span class="built_in">clone</span> user@host</span><br></pre></td></tr></table></figure>
 
+<p>  您可以在一行中输入所有内容，省略。</p>
+</li>
+<li><h5 id="选项3：GIT-SSH"><a href="#选项3：GIT-SSH" class="headerlink" title="选项3：GIT_SSH"></a>选项3：GIT_SSH</h5><p>  使用GIT_SSH环境变量传递ssh参数。<br>  例如：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*'</span> &gt; ssh</span><br><span class="line">$ chmod +x ssh</span><br><span class="line">$ GIT_TRACE=1 GIT_SSH=<span class="string">'./ssh'</span> git <span class="built_in">clone</span> user@host</span><br></pre></td></tr></table></figure>
+
+<p>  注意：上面的行是你应该粘贴到你的终端的shell(终端)命令行。他们将创建一个名为ssh的文件，使其可执行，并(间接)执行它。</p>
+</li>
+<li><h5 id="选项4：-ssh-config"><a href="#选项4：-ssh-config" class="headerlink" title="选项4：~/.ssh/config"></a>选项4：~/.ssh/config</h5><p>  使用其他答案中建议的~/.ssh/config文件，以指定您的私钥的位置。</p>
 </li>
 </ul>
-<h5 id="第三种方案"><a href="#第三种方案" class="headerlink" title="第三种方案"></a>第三种方案</h5><p>没有直接的方法告诉git哪个私钥要使用，因为它依赖于ssh进行存储库认证。但是，仍有几种方法可以实现您的目标：</p>
+<h4 id="第四种方案"><a href="#第四种方案" class="headerlink" title="第四种方案"></a>第四种方案</h4><p>编写一个使用所需参数调用ssh的脚本，并将脚本的文件名放在$GIT_SSH中。或者将您的配置放在~/.ssh/config中。</p>
+<h4 id="第五种方案"><a href="#第五种方案" class="headerlink" title="第五种方案"></a>第五种方案</h4><p>在与$GIT_SSH斗争之后，我想分享一下对我有用的东西。<br>通过我的例子，我会假设你的私钥位于/home/user/.ssh/jenkins</p>
 <ul>
-<li><h6 id="选项1：ssh-agent"><a href="#选项1：ssh-agent" class="headerlink" title="选项1：ssh-agent"></a>选项1：ssh-agent</h6><p>您可以使用ssh-agent临时授权您的私钥。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-agent sh -c <span class="string">'ssh-add ~/.ssh/id_rsa; git fetch user@host'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><h6 id="选项2：GIT-SSH-COMMAND"><a href="#选项2：GIT-SSH-COMMAND" class="headerlink" title="选项2：GIT_SSH_COMMAND"></a>选项2：GIT_SSH_COMMAND</h6><p>使用GIT_SSH_COMMAND环境变量(Git 2.3.0+)传递ssh参数。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ GIT_SSH_COMMAND=<span class="string">'ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'</span> git <span class="built_in">clone</span> user@host</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>您可以在一行中输入所有内容，省略。</p>
-<ul>
-<li><h6 id="选项3：GIT-SSH"><a href="#选项3：GIT-SSH" class="headerlink" title="选项3：GIT_SSH"></a>选项3：GIT_SSH</h6>使用GIT_SSH环境变量传递ssh参数。<br>例如：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*'</span> &gt; ssh</span><br><span class="line">$ chmod +x ssh</span><br><span class="line">$ GIT_TRACE=1 GIT_SSH=<span class="string">'./ssh'</span> git <span class="built_in">clone</span> user@host</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>注意：上面的行是你应该粘贴到你的终端的shell(终端)命令行。他们将创建一个名为ssh的文件，使其可执行，并(间接)执行它。</p>
-<ul>
-<li><h6 id="选项4：-ssh-config"><a href="#选项4：-ssh-config" class="headerlink" title="选项4：~/.ssh/config"></a>选项4：~/.ssh/config</h6>使用其他答案中建议的~/.ssh/config文件，以指定您的私钥的位置。</li>
-</ul>
-<h5 id="第四种方案"><a href="#第四种方案" class="headerlink" title="第四种方案"></a>第四种方案</h5><p>编写一个使用所需参数调用ssh的脚本，并将脚本的文件名放在$GIT_SSH中。或者将您的配置放在~/.ssh/config中。</p>
-<h5 id="第五种方案"><a href="#第五种方案" class="headerlink" title="第五种方案"></a>第五种方案</h5><p>在与$GIT_SSH斗争之后，我想分享一下对我有用的东西。<br>通过我的例子，我会假设你的私钥位于/home/user/.ssh/jenkins</p>
-<ul>
-<li><h6 id="错误避免：GIT-SSH值包括选项"><a href="#错误避免：GIT-SSH值包括选项" class="headerlink" title="错误避免：GIT_SSH值包括选项"></a>错误避免：GIT_SSH值包括选项</h6><pre><code class="bash">$ <span class="built_in">export</span> GIT_SSH=<span class="string">"ssh -i /home/user/.ssh/jenkins"</span></code></pre>
-或者任何类似的将失败，因为git将尝试将该值作为文件执行。因此，您必须创建一个脚本。</li>
-<li><h6 id="GIT-SSH脚本-home-user-gssh-sh的工作示例"><a href="#GIT-SSH脚本-home-user-gssh-sh的工作示例" class="headerlink" title="$ GIT_SSH脚本/home/user/gssh.sh的工作示例"></a>$ GIT_SSH脚本/home/user/gssh.sh的工作示例</h6>脚本将被调用如下：<pre><code class="bash">$ <span class="variable">$GIT_SSH</span> [username@]host [-p &lt;port&gt;] &lt;<span class="built_in">command</span>&gt;</code></pre>
-工作示例脚本可能如下所示：<pre><code class="bash"><span class="meta">#!/bin/sh</span>
+<li><h5 id="错误避免：GIT-SSH值包括选项"><a href="#错误避免：GIT-SSH值包括选项" class="headerlink" title="错误避免：GIT_SSH值包括选项"></a>错误避免：GIT_SSH值包括选项</h5><pre><code class="bash">$ <span class="built_in">export</span> GIT_SSH=<span class="string">"ssh -i /home/user/.ssh/jenkins"</span></code></pre>
+  或者任何类似的将失败，因为git将尝试将该值作为文件执行。因此，您必须创建一个脚本。</li>
+<li><h5 id="GIT-SSH脚本-home-user-gssh-sh的工作示例"><a href="#GIT-SSH脚本-home-user-gssh-sh的工作示例" class="headerlink" title="$ GIT_SSH脚本/home/user/gssh.sh的工作示例"></a>$ GIT_SSH脚本/home/user/gssh.sh的工作示例</h5>  脚本将被调用如下：<pre><code class="bash">$ <span class="variable">$GIT_SSH</span> [username@]host [-p &lt;port&gt;] &lt;<span class="built_in">command</span>&gt;</code></pre>
+  工作示例脚本可能如下所示：<pre><code class="bash"><span class="meta">#!/bin/sh</span>
 ssh -i /home/user/.ssh/jenkins $*</code></pre>
-注意$*到底是它的重要组成部分。<br>甚至更安全的选择，这将防止任何与您的默认配置文件中的任何可能的冲突(加上明确提及要使用的端口)将是：<pre><code class="bash"><span class="meta">#!/bin/sh</span>
+  注意$*到底是它的重要组成部分。<br>  甚至更安全的选择，这将防止任何与您的默认配置文件中的任何可能的冲突(加上明确提及要使用的端口)将是：<pre><code class="bash"><span class="meta">#!/bin/sh</span>
 ssh -i /home/user/.ssh/jenkins -F /dev/null -p 22 $*</code></pre>
-假设脚本在/home/user/gssh.sh中，那么你将：<pre><code class="bash">$ <span class="built_in">export</span> GIT_SSH=/home/user/gssh.sh</code></pre>
-所有人都应该工作。</li>
+  假设脚本在/home/user/gssh.sh中，那么你将：<pre><code class="bash">$ <span class="built_in">export</span> GIT_SSH=/home/user/gssh.sh</code></pre>
+  所有人都应该工作。</li>
 </ul>
-<h5 id="第六种方案"><a href="#第六种方案" class="headerlink" title="第六种方案"></a>第六种方案</h5><p>如果您不想在每次运行git时指定环境变量，则不要再使用另一个包装器脚本，不要/不能运行ssh-agent(1)，也不想为此下载另一个包，请使用git-remote-ext(1 )外部运输：</p>
+<h4 id="第六种方案"><a href="#第六种方案" class="headerlink" title="第六种方案"></a>第六种方案</h4><p>如果您不想在每次运行git时指定环境变量，则不要再使用另一个包装器脚本，不要/不能运行ssh-agent(1)，也不想为此下载另一个包，请使用git-remote-ext(1 )外部运输：</p>
 <pre><code class="bash">$ git <span class="built_in">clone</span> <span class="string">'ext::ssh -i $HOME/.ssh/alternate_id git.example.com %S /path/to/repository.git'</span>
 Cloning into <span class="string">'repository'</span>
 (...)
@@ -411,7 +435,7 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 <li>不需要SSH代理 – 如果您想要无人值守的克隆/推/拉(例如在cron)  </li>
 <li>当然，没有外部工具需要  </li>
 </ul>
-<h5 id="第七种方案"><a href="#第七种方案" class="headerlink" title="第七种方案"></a>第七种方案</h5><p>您可以使用ssh-ident而不是创建自己的包装器。<br>您可以阅读更多：<a href="https://github.com/ccontavalli/ssh-ident" target="_blank" rel="noopener">https://github.com/ccontavalli/ssh-ident</a><br>它首次需要加载ssh密钥，一次，即使是多个登录会话，xterms或NFS共享的家庭。<br>使用一个微小的配置文件，它可以自动加载不同的密钥，并根据您需要做的事情将它们分隔在不同的代理(代理转发)中。</p>
+<h4 id="第七种方案"><a href="#第七种方案" class="headerlink" title="第七种方案"></a>第七种方案</h4><p>您可以使用ssh-ident而不是创建自己的包装器。<br>您可以阅读更多：<a href="https://github.com/ccontavalli/ssh-ident" target="_blank" rel="noopener">https://github.com/ccontavalli/ssh-ident</a><br>它首次需要加载ssh密钥，一次，即使是多个登录会话，xterms或NFS共享的家庭。<br>使用一个微小的配置文件，它可以自动加载不同的密钥，并根据您需要做的事情将它们分隔在不同的代理(代理转发)中。</p>
 
       
     </div>
@@ -424,8 +448,32 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    greyair
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://blog.plist.xyz/2019/08/11/git-指定要提交的ssh-key/" title="git 指定要提交的ssh key">http://blog.plist.xyz/2019/08/11/git-指定要提交的ssh-key/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
       
 
       
@@ -445,6 +493,10 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/11/Hexo博客相关配置和修改/" rel="prev" title="Hexo博客相关配置和修改">
+                Hexo博客相关配置和修改 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -510,8 +562,10 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.gif" alt="greyair">
+            
               <p class="site-author-name" itemprop="name">greyair</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">仅仅活着就已经耗尽所有力气</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -521,20 +575,48 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/greyair" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -558,7 +640,7 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最佳解决方案"><span class="nav-number">2.</span> <span class="nav-text">最佳解决方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#次佳解决方案"><span class="nav-number">3.</span> <span class="nav-text">次佳解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#环境变量GIT-SSH-COMMAND："><span class="nav-number">3.1.</span> <span class="nav-text">环境变量GIT_SSH_COMMAND：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置core-sshCommand："><span class="nav-number">3.2.</span> <span class="nav-text">配置core.sshCommand：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三种方案"><span class="nav-number">4.</span> <span class="nav-text">第三种方案</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#选项1：ssh-agent"><span class="nav-number">4.1.</span> <span class="nav-text">选项1：ssh-agent</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#选项2：GIT-SSH-COMMAND"><span class="nav-number">4.2.</span> <span class="nav-text">选项2：GIT_SSH_COMMAND</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#选项3：GIT-SSH"><span class="nav-number">4.3.</span> <span class="nav-text">选项3：GIT_SSH</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#选项4：-ssh-config"><span class="nav-number">4.4.</span> <span class="nav-text">选项4：~/.ssh/config</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第四种方案"><span class="nav-number">5.</span> <span class="nav-text">第四种方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第五种方案"><span class="nav-number">6.</span> <span class="nav-text">第五种方案</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#错误避免：GIT-SSH值包括选项"><span class="nav-number">6.1.</span> <span class="nav-text">错误避免：GIT_SSH值包括选项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#GIT-SSH脚本-home-user-gssh-sh的工作示例"><span class="nav-number">6.2.</span> <span class="nav-text">$ GIT_SSH脚本/home/user/gssh.sh的工作示例</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第六种方案"><span class="nav-number">7.</span> <span class="nav-text">第六种方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第七种方案"><span class="nav-number">8.</span> <span class="nav-text">第七种方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳解决方案"><span class="nav-number">2.</span> <span class="nav-text">最佳解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#次佳解决方案"><span class="nav-number">3.</span> <span class="nav-text">次佳解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#环境变量GIT-SSH-COMMAND："><span class="nav-number">3.1.</span> <span class="nav-text">环境变量GIT_SSH_COMMAND：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置core-sshCommand："><span class="nav-number">3.2.</span> <span class="nav-text">配置core.sshCommand：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三种方案"><span class="nav-number">4.</span> <span class="nav-text">第三种方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#选项1：ssh-agent"><span class="nav-number">4.1.</span> <span class="nav-text">选项1：ssh-agent</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选项2：GIT-SSH-COMMAND"><span class="nav-number">4.2.</span> <span class="nav-text">选项2：GIT_SSH_COMMAND</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选项3：GIT-SSH"><span class="nav-number">4.3.</span> <span class="nav-text">选项3：GIT_SSH</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选项4：-ssh-config"><span class="nav-number">4.4.</span> <span class="nav-text">选项4：~/.ssh/config</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四种方案"><span class="nav-number">5.</span> <span class="nav-text">第四种方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五种方案"><span class="nav-number">6.</span> <span class="nav-text">第五种方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#错误避免：GIT-SSH值包括选项"><span class="nav-number">6.1.</span> <span class="nav-text">错误避免：GIT_SSH值包括选项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GIT-SSH脚本-home-user-gssh-sh的工作示例"><span class="nav-number">6.2.</span> <span class="nav-text">$ GIT_SSH脚本/home/user/gssh.sh的工作示例</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六种方案"><span class="nav-number">7.</span> <span class="nav-text">第六种方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七种方案"><span class="nav-number">8.</span> <span class="nav-text">第七种方案</span></a></li></ol></div>
             
 
           </div>
@@ -566,6 +648,13 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -588,15 +677,11 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
 
 
 
@@ -613,11 +698,6 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     

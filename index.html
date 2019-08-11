@@ -79,13 +79,16 @@
 
 
 
+<meta name="description" content="仅仅活着就已经耗尽所有力气">
 <meta property="og:type" content="website">
 <meta property="og:title" content="灰空气的小站">
 <meta property="og:url" content="http://blog.plist.xyz/index.html">
 <meta property="og:site_name" content="灰空气的小站">
+<meta property="og:description" content="仅仅活着就已经耗尽所有力气">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="灰空气的小站">
+<meta name="twitter:description" content="仅仅活着就已经耗尽所有力气">
 
 
 
@@ -95,7 +98,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -157,7 +160,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">仅仅活着就已经耗尽所有力气</p>
       
   </div>
 
@@ -226,16 +229,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
-            
-            公益404
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -269,12 +262,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.plist.xyz/2019/08/11/Hexo博客相关配置和修改/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="greyair">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="灰空气的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/11/Hexo博客相关配置和修改/" itemprop="url">Hexo博客相关配置和修改</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-11T20:25:47+00:00">
+                2019-08-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-11T13:59:12+00:00">
+                2019-08-11
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="设置圆形头像并旋转"><a href="#设置圆形头像并旋转" class="headerlink" title="设置圆形头像并旋转"></a>设置圆形头像并旋转</h2><p>Hexo Next主题将头像显示成圆形，鼠标放上去有旋转效果。<br>找到主题配置文件：</p>
+<blockquote>
+<p>/themes/next/source/css/_common/components/sidebar/sidebar-author.styl</p>
+</blockquote>
+<p>替换其中的site-author-image属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.site-author-image</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">padding</span>: $site-author-image-padding;</span><br><span class="line">  <span class="attribute">max-width</span>: $site-author-image-width;</span><br><span class="line">  <span class="attribute">height</span>: $site-author-image-height;</span><br><span class="line">  <span class="attribute">border</span>: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2.5s</span> all;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.site-author-image</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(360deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/11/Hexo博客相关配置和修改/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.plist.xyz/2019/08/11/git-指定要提交的ssh-key/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="greyair">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -306,10 +462,44 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-11T17:26:00+00:00">
+                2019-08-11
+              </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,82 +529,18 @@
 
       
         
-          
-            <h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>ssh具有-i选项，用于告知在验证时使用哪个私钥文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-i identity_file</span><br><span class="line">Selects a file from <span class="built_in">which</span> the identity (private key) <span class="keyword">for</span> RSA or DSA authentication is <span class="built_in">read</span>.  The default is </span><br><span class="line">~/.ssh/identity <span class="keyword">for</span> protocol version 1, and ~/.ssh/id_rsa and ~/.ssh/id_dsa <span class="keyword">for</span> protocol version 2.  Identity files may also be specified on a per-host basis <span class="keyword">in</span> the configuration file.  It is possible to have multiple -i options (and multiple identities specified <span class="keyword">in</span> configuration files).</span><br></pre></td></tr></table></figure>
-
+          <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>ssh具有-i选项，用于告知在验证时使用哪个私钥文件：</p>
+<blockquote>
+<p>-i identity_file<br>Selects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is<br>~/.ssh/identity for protocol version 1, and ~/.ssh/id_rsa and ~/.ssh/id_dsa for protocol version 2.  Identity files may also be specified on a per-host basis in the configuration file.  It is possible to have multiple -i options (and multiple identities specified in configuration files).</p>
+</blockquote>
 <p>有没有类似的方法告诉git哪个私钥文件在~/.ssh目录中有多个私钥的系统上使用？</p>
-<h5 id="最佳解决方案"><a href="#最佳解决方案" class="headerlink" title="最佳解决方案"></a>最佳解决方案</h5><p>在~/.ssh/config中，添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa_github</span><br><span class="line">	User git</span><br></pre></td></tr></table></figure>
-
-<p>现在你可以做git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/repo.git。</p>
-<p>注意：验证IdentityFile的权限是否为400.SSH将以不清楚的方式拒绝太可读的SSH密钥。它只会看起来像一个凭证拒绝。在这种情况下，解决方案是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 400 ~/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
-
-<h5 id="次佳解决方案"><a href="#次佳解决方案" class="headerlink" title="次佳解决方案"></a>次佳解决方案</h5><ul>
-<li><h6 id="环境变量GIT-SSH-COMMAND："><a href="#环境变量GIT-SSH-COMMAND：" class="headerlink" title="环境变量GIT_SSH_COMMAND："></a>环境变量GIT_SSH_COMMAND：</h6>从Git版本2.3.0可以使用环境变量GIT_SSH_COMMAND，如下所示：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_SSH_COMMAND=<span class="string">"ssh -i ~/.ssh/id_rsa_example"</span> git <span class="built_in">clone</span> example</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>请注意，-i有时可以被您的配置文件覆盖，在这种情况下，您应该给SSH一个空配置文件，如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_SSH_COMMAND=<span class="string">"ssh -i ~/.ssh/id_rsa_example -F /dev/null"</span> git <span class="built_in">clone</span> example</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h6 id="配置core-sshCommand："><a href="#配置core-sshCommand：" class="headerlink" title="配置core.sshCommand："></a>配置core.sshCommand：</h6>从Git版本2.10.0，您可以配置每个repo或全局，所以您不必再设置环境变量！<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config core.sshCommand <span class="string">"ssh -i ~/.ssh/id_rsa_example -F /dev/null"</span></span><br><span class="line">git pull</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h5 id="第三种方案"><a href="#第三种方案" class="headerlink" title="第三种方案"></a>第三种方案</h5><p>没有直接的方法告诉git哪个私钥要使用，因为它依赖于ssh进行存储库认证。但是，仍有几种方法可以实现您的目标：</p>
-<ul>
-<li><h6 id="选项1：ssh-agent"><a href="#选项1：ssh-agent" class="headerlink" title="选项1：ssh-agent"></a>选项1：ssh-agent</h6><p>您可以使用ssh-agent临时授权您的私钥。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-agent sh -c <span class="string">'ssh-add ~/.ssh/id_rsa; git fetch user@host'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><h6 id="选项2：GIT-SSH-COMMAND"><a href="#选项2：GIT-SSH-COMMAND" class="headerlink" title="选项2：GIT_SSH_COMMAND"></a>选项2：GIT_SSH_COMMAND</h6><p>使用GIT_SSH_COMMAND环境变量(Git 2.3.0+)传递ssh参数。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ GIT_SSH_COMMAND=<span class="string">'ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'</span> git <span class="built_in">clone</span> user@host</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>您可以在一行中输入所有内容，省略。</p>
-<ul>
-<li><h6 id="选项3：GIT-SSH"><a href="#选项3：GIT-SSH" class="headerlink" title="选项3：GIT_SSH"></a>选项3：GIT_SSH</h6>使用GIT_SSH环境变量传递ssh参数。<br>例如：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*'</span> &gt; ssh</span><br><span class="line">$ chmod +x ssh</span><br><span class="line">$ GIT_TRACE=1 GIT_SSH=<span class="string">'./ssh'</span> git <span class="built_in">clone</span> user@host</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>注意：上面的行是你应该粘贴到你的终端的shell(终端)命令行。他们将创建一个名为ssh的文件，使其可执行，并(间接)执行它。</p>
-<ul>
-<li><h6 id="选项4：-ssh-config"><a href="#选项4：-ssh-config" class="headerlink" title="选项4：~/.ssh/config"></a>选项4：~/.ssh/config</h6>使用其他答案中建议的~/.ssh/config文件，以指定您的私钥的位置。</li>
-</ul>
-<h5 id="第四种方案"><a href="#第四种方案" class="headerlink" title="第四种方案"></a>第四种方案</h5><p>编写一个使用所需参数调用ssh的脚本，并将脚本的文件名放在$GIT_SSH中。或者将您的配置放在~/.ssh/config中。</p>
-<h5 id="第五种方案"><a href="#第五种方案" class="headerlink" title="第五种方案"></a>第五种方案</h5><p>在与$GIT_SSH斗争之后，我想分享一下对我有用的东西。<br>通过我的例子，我会假设你的私钥位于/home/user/.ssh/jenkins</p>
-<ul>
-<li><h6 id="错误避免：GIT-SSH值包括选项"><a href="#错误避免：GIT-SSH值包括选项" class="headerlink" title="错误避免：GIT_SSH值包括选项"></a>错误避免：GIT_SSH值包括选项</h6><pre><code class="bash">$ <span class="built_in">export</span> GIT_SSH=<span class="string">"ssh -i /home/user/.ssh/jenkins"</span></code></pre>
-或者任何类似的将失败，因为git将尝试将该值作为文件执行。因此，您必须创建一个脚本。</li>
-<li><h6 id="GIT-SSH脚本-home-user-gssh-sh的工作示例"><a href="#GIT-SSH脚本-home-user-gssh-sh的工作示例" class="headerlink" title="$ GIT_SSH脚本/home/user/gssh.sh的工作示例"></a>$ GIT_SSH脚本/home/user/gssh.sh的工作示例</h6>脚本将被调用如下：<pre><code class="bash">$ <span class="variable">$GIT_SSH</span> [username@]host [-p &lt;port&gt;] &lt;<span class="built_in">command</span>&gt;</code></pre>
-工作示例脚本可能如下所示：<pre><code class="bash"><span class="meta">#!/bin/sh</span>
-ssh -i /home/user/.ssh/jenkins $*</code></pre>
-注意$*到底是它的重要组成部分。<br>甚至更安全的选择，这将防止任何与您的默认配置文件中的任何可能的冲突(加上明确提及要使用的端口)将是：<pre><code class="bash"><span class="meta">#!/bin/sh</span>
-ssh -i /home/user/.ssh/jenkins -F /dev/null -p 22 $*</code></pre>
-假设脚本在/home/user/gssh.sh中，那么你将：<pre><code class="bash">$ <span class="built_in">export</span> GIT_SSH=/home/user/gssh.sh</code></pre>
-所有人都应该工作。</li>
-</ul>
-<h5 id="第六种方案"><a href="#第六种方案" class="headerlink" title="第六种方案"></a>第六种方案</h5><p>如果您不想在每次运行git时指定环境变量，则不要再使用另一个包装器脚本，不要/不能运行ssh-agent(1)，也不想为此下载另一个包，请使用git-remote-ext(1 )外部运输：</p>
-<pre><code class="bash">$ git <span class="built_in">clone</span> <span class="string">'ext::ssh -i $HOME/.ssh/alternate_id git.example.com %S /path/to/repository.git'</span>
-Cloning into <span class="string">'repository'</span>
-(...)
-$ <span class="built_in">cd</span> repository
-$ git remote -v
-origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.example.com %S /path/to/repository.git (fetch)
-origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.example.com %S /path/to/repository.git (push)</code></pre>
-<p>我认为这个解决方案是优越的，因为：  </p>
-<ul>
-<li>它是存储库/远程特定的  </li>
-<li>避免包装脚本膨胀  </li>
-<li>不需要SSH代理 – 如果您想要无人值守的克隆/推/拉(例如在cron)  </li>
-<li>当然，没有外部工具需要  </li>
-</ul>
-<h5 id="第七种方案"><a href="#第七种方案" class="headerlink" title="第七种方案"></a>第七种方案</h5><p>您可以使用ssh-ident而不是创建自己的包装器。<br>您可以阅读更多：<a href="https://github.com/ccontavalli/ssh-ident" target="_blank" rel="noopener">https://github.com/ccontavalli/ssh-ident</a><br>它首次需要加载ssh密钥，一次，即使是多个登录会话，xterms或NFS共享的家庭。<br>使用一个微小的配置文件，它可以自动加载不同的密钥，并根据您需要做的事情将它们分隔在不同的代理(代理转发)中。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/11/git-指定要提交的ssh-key/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -466,7 +592,7 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="greyair">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -498,7 +624,19 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-10T14:53:30+00:00">
+                2019-08-10
+              </time>
             
           </span>
 
@@ -532,9 +670,16 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
       
         
           
-            <p>this is my first blog!</p>
+          this is my first blog!
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/10/my-first-blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -603,8 +748,10 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.gif" alt="greyair">
+            
               <p class="site-author-name" itemprop="name">greyair</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">仅仅活着就已经耗尽所有力气</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -614,20 +761,48 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/greyair" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -643,6 +818,13 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -665,15 +847,11 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
 
 
 
@@ -690,11 +868,6 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
