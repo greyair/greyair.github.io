@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="灰空气的小站">
-<meta property="og:url" content="http://blog.plist.xyz/index.html">
+<meta name="description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件： 123-i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is ~/.ssh/identity for protocol version 1, a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 指定要提交的ssh key">
+<meta property="og:url" content="http://blog.plist.xyz/2019/08/11/git-指定要提交的ssh-key/index.html">
 <meta property="og:site_name" content="灰空气的小站">
+<meta property="og:description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件： 123-i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is ~/.ssh/identity for protocol version 1, a">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-11T06:35:12.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="灰空气的小站">
+<meta name="twitter:title" content="git 指定要提交的ssh key">
+<meta name="twitter:description" content="问题描述ssh具有-i选项，用于告知在验证时使用哪个私钥文件： 123-i identity_fileSelects a file from which the identity (private key) for RSA or DSA authentication is read.  The default is ~/.ssh/identity for protocol version 1, a">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.plist.xyz/">
+  <link rel="canonical" href="http://blog.plist.xyz/2019/08/11/git-指定要提交的ssh-key/">
 
 
 
 
 
-  <title>灰空气的小站</title>
+  <title>git 指定要提交的ssh key | 灰空气的小站</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -254,9 +257,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -286,9 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/11/git-指定要提交的ssh-key/" itemprop="url">git 指定要提交的ssh key</a></h1>
+          <h1 class="post-title" itemprop="name headline">git 指定要提交的ssh key</h1>
         
 
         <div class="post-meta">
@@ -338,9 +339,7 @@
       
 
       
-        
-          
-            <h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>ssh具有-i选项，用于告知在验证时使用哪个私钥文件：</p>
+        <h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>ssh具有-i选项，用于告知在验证时使用哪个私钥文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-i identity_file</span><br><span class="line">Selects a file from <span class="built_in">which</span> the identity (private key) <span class="keyword">for</span> RSA or DSA authentication is <span class="built_in">read</span>.  The default is </span><br><span class="line">~/.ssh/identity <span class="keyword">for</span> protocol version 1, and ~/.ssh/id_rsa and ~/.ssh/id_dsa <span class="keyword">for</span> protocol version 2.  Identity files may also be specified on a per-host basis <span class="keyword">in</span> the configuration file.  It is possible to have multiple -i options (and multiple identities specified <span class="keyword">in</span> configuration files).</span><br></pre></td></tr></table></figure>
 
 <p>有没有类似的方法告诉git哪个私钥文件在~/.ssh目录中有多个私钥的系统上使用？</p>
@@ -414,8 +413,6 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 </ul>
 <h5 id="第七种方案"><a href="#第七种方案" class="headerlink" title="第七种方案"></a>第七种方案</h5><p>您可以使用ssh-ident而不是创建自己的包装器。<br>您可以阅读更多：<a href="https://github.com/ccontavalli/ssh-ident" target="_blank" rel="noopener">https://github.com/ccontavalli/ssh-ident</a><br>它首次需要加载ssh密钥，一次，即使是多个登录会话，xterms或NFS共享的家庭。<br>使用一个微小的配置文件，它可以自动加载不同的密钥，并根据您需要做的事情将它们分隔在不同的代理(代理转发)中。</p>
 
-          
-        
       
     </div>
     
@@ -432,132 +429,28 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.plist.xyz/2019/08/10/my-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="greyair">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="灰空气的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/10/my-first-blog/" itemprop="url">my first blog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-10T14:52:00+00:00">
-                2019-08-10
-              </time>
+              <a href="/2019/08/10/my-first-blog/" rel="next" title="my first blog">
+                <i class="fa fa-chevron-left"></i> my first blog
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>this is my first blog!</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -567,10 +460,11 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -578,6 +472,10 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 
 
           
+
+  
+
+
 
         </div>
         
@@ -598,8 +496,17 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -641,6 +548,22 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最佳解决方案"><span class="nav-number">2.</span> <span class="nav-text">最佳解决方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#次佳解决方案"><span class="nav-number">3.</span> <span class="nav-text">次佳解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#环境变量GIT-SSH-COMMAND："><span class="nav-number">3.1.</span> <span class="nav-text">环境变量GIT_SSH_COMMAND：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置core-sshCommand："><span class="nav-number">3.2.</span> <span class="nav-text">配置core.sshCommand：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三种方案"><span class="nav-number">4.</span> <span class="nav-text">第三种方案</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#选项1：ssh-agent"><span class="nav-number">4.1.</span> <span class="nav-text">选项1：ssh-agent</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#选项2：GIT-SSH-COMMAND"><span class="nav-number">4.2.</span> <span class="nav-text">选项2：GIT_SSH_COMMAND</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#选项3：GIT-SSH"><span class="nav-number">4.3.</span> <span class="nav-text">选项3：GIT_SSH</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#选项4：-ssh-config"><span class="nav-number">4.4.</span> <span class="nav-text">选项4：~/.ssh/config</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第四种方案"><span class="nav-number">5.</span> <span class="nav-text">第四种方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第五种方案"><span class="nav-number">6.</span> <span class="nav-text">第五种方案</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#错误避免：GIT-SSH值包括选项"><span class="nav-number">6.1.</span> <span class="nav-text">错误避免：GIT_SSH值包括选项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#GIT-SSH脚本-home-user-gssh-sh的工作示例"><span class="nav-number">6.2.</span> <span class="nav-text">$ GIT_SSH脚本/home/user/gssh.sh的工作示例</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第六种方案"><span class="nav-number">7.</span> <span class="nav-text">第六种方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第七种方案"><span class="nav-number">8.</span> <span class="nav-text">第七种方案</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -781,6 +704,10 @@ origin ext::ssh -i <span class="variable">$HOME</span>/.ssh/alternate_id git.exa
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
